@@ -1,51 +1,32 @@
-<div align="center">
-  <img src="assets/scramjet.png" height="200" />
-</div>
+<p align="center"><img src="https://raw.githubusercontent.com/titaniumnetwork-dev/Ultraviolet-Static/main/public/uv.png" height="200"></p>
 
----
+<h1 align="center">Ultraviolet-App</h1>
 
-> [!WARNING]  
-> Scramjet is not currently production ready, DO NOT USE THIS AS THE MAIN OPTION IN YOUR SITE.
+> [!CAUTION]
+> Please note that this project isn't really maintained anymore before making issues! It has been superseded by [Scramjet](https://github.com/MercuryWorkshop/scramjet). An example application setup can be found [here](https://github.com/MercuryWorkshop/Scramjet-App).
 
-<a href="https://www.npmjs.com/package/@mercuryworkshop/scramjet"><img src="https://img.shields.io/npm/v/@mercuryworkshop/scramjet.svg?maxAge=3600" alt="npm version" /></a>
+The deployable all-in-one bundle for [Ultraviolet](https://github.com/titaniumnetwork-dev/Ultraviolet), a highly sophisticated proxy used for evading internet censorship or accessing websites in a controlled sandbox using the power of service-workers and more!
 
-Scramjet is an experimental interception based web proxy that aims to be the successor to Ultraviolet. It is designed with security, developer friendliness, and performance in mind. Scramjet strives to have a clean, organized codebase to improve maintainability. Scramjet is made to evade internet censorship and bypass arbitrary web browser restrictions.
+## Deployment
 
-## Supported Sites
+[![Run on Replit](https://binbashbanana.github.io/deploy-buttons/buttons/remade/replit.svg)](https://github.com/titaniumnetwork-dev/Ultraviolet-App/wiki/Run-on-Replit)
+[![Deploy on Railway](https://binbashbanana.github.io/deploy-buttons/buttons/remade/railway.svg)](https://github.com/titaniumnetwork-dev/Ultraviolet-App/wiki/Deploy-on-Railway)
+[![Remix on Glitch](https://binbashbanana.github.io/deploy-buttons/buttons/remade/glitch.svg)](https://github.com/titaniumnetwork-dev/Ultraviolet-App/wiki/Remix-on-Glitch)
+[![Deploy to Koyeb](https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg)](https://github.com/titaniumnetwork-dev/Ultraviolet-App/wiki/Deploy-to-Koyeb)
 
-Some of the popular websites that Scramjet supports include:
+If you are deploying to an alternative service or to a server, refer to [Deploy via terminal](https://github.com/titaniumnetwork-dev/Ultraviolet-App/wiki/Deploy-via-terminal).
 
--   [Google](https://google.com)
--   [Youtube](https://www.youtube.com)
--   [Spotify](https://spotify.com)
--   [Discord](https://discord.com)
--   [Reddit](https://reddit.com)
--   [GeForce NOW](https://play.geforcenow.com/)
--   [now.gg](https://now.gg)
+Additional information such as [customizing your frontend](https://github.com/titaniumnetwork-dev/Ultraviolet-App/wiki/Customizing-your-frontend) can be found on the [wiki](https://github.com/titaniumnetwork-dev/Ultraviolet-App/wiki).
 
-## Development
+Support and updates can be found in our [Discord Server](discord.gg/unblock).
 
-### Dependencies
+> [!IMPORTANT]  
+> Until deployed on a domain with a valid SSL certificate, Firefox will not be able to load the site. Use chromium for testing on localhost
 
--   Recent versions of `node.js` and `pnpm`
--   `rustup`
--   `wasm-bindgen`
--   [Binaryen's `wasm-opt`](https://github.com/WebAssembly/binaryen)
--   [this `wasm-snip` fork](https://github.com/r58Playz/wasm-snip)
+### HTTP Transport
 
-#### Building
+The example uses [EpoxyTransport](https://github.com/MercuryWorkshop/EpoxyTransport) to fetch proxied data encrypted.
 
--   Clone the repository with `git clone --recursive https://github.com/MercuryWorkshop/scramjet`
--   Install the dependencies with `pnpm i`
--   Build the rewriter with `pnpm rewriter:build`
--   Build Scramjet with `pnpm build`
+You may also want to use [CurlTransport](https://github.com/MercuryWorkshop/CurlTransport), a different way of fetching encrypted data, or [Bare-Client](https://github.com/MercuryWorkshop/Bare-as-module3), the legacy (unencrypted!) transport.
 
-### Running Scramjet Locally
-
-You can run the Scramjet dev server with the command
-
-```sh
-pnpm dev
-```
-
-Scramjet should now be running at `localhost:1337` and should rebuild upon a file being changed (excluding the rewriter).
+See the [bare-mux](https://github.com/MercuryWorkshop/bare-mux) documentation for more information.
